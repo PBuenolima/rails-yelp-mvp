@@ -1,0 +1,19 @@
+<h1 class="text-center"><%= @restaurants.name %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <ul>
+        <% @restaurants.each do |restaurant| %>
+          <li>
+            <p>Name: <%= restaurant.name %></p>
+            <p>Address: <%= restaurant.address %></p>
+            <p>Phone: <%= restaurant.phone_number %></p>
+            <p>Category: <%= restaurant.category %></p>
+            <%= link_to 'Show', restaurant %>
+          </li>
+        <% end %>
+          <%= link_to 'Insert a New restaurant', new_restaurant_path  %>
+      </ul>
+    </div>
+  </div>
+</div>
